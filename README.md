@@ -4,7 +4,7 @@ systemd failure event publisher
     $ sudo su -
     # dnf -y install s-nail
     # echo 'set v15-compat' >> /etc/s-nail.rc
-    # echo 'set mta=smtp://your.mx smtp-auth=none' >> /etc/s-nail.rc
+    # echo 'set mta=smtp://YOUR.MX smtp-auth=none' >> /etc/s-nail.rc
     # # Customize failure-event file, and then:
     # cp failure-event /etc/sysconfig/
     # cp failure-event@.service /etc/systemd/system/
