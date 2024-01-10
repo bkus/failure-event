@@ -17,4 +17,4 @@ Once the test passes, integrate failure notifications into your systemd services
     [Unit]
     OnFailure=failure-event@%n.service
 
-Don't forget to systemctl daemon-reload after editing systemd units.  If you're adding failure event publishing to 3rd party systemd units, it's probably best to use unit overrides instead of editing the stock files: systemctl edit THIRD_PARTY_SERVICE.
+Don't forget to `systemctl daemon-reload` after editing systemd units.  If you're adding failure event publishing to 3rd party systemd units, it's probably best to use unit overrides instead of editing the stock files: `systemctl edit THIRD_PARTY_SERVICE`.
