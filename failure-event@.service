@@ -1,0 +1,8 @@
+[Unit]
+Description=Failure Event Publisher
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=-/etc/sysconfig/failure-event
+ExecStart=/usr/bin/bash -c 'systemctl status %I | s-nail -r $FAILURE_EVENT_FROM -s "%I failed on %H" $FAILURE_EVENT_TO'
